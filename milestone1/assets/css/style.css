@@ -89,9 +89,12 @@ nav {
     background-color: brown;
 }
 
-#input_message {
+#message_box {
+    display: flex;
     height: 10%;
     background-color: violet;
+    justify-content: space-between;
+    align-items: center;
 }
 
 i{

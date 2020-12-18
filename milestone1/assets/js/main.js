@@ -7,6 +7,7 @@ let app = new Vue ({
             {
                 name: "Roberto",
                 avatar: "./assets/img/avatar_1.jpg",
+                
                 visible: true,
                 messages: [
                     {

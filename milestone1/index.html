@@ -31,13 +31,21 @@
                 </div>
                 <div id="app_container_right">
                     <div id="chat_title">
-                        <i class="fas fa-search"></i>
-                        <i class="fas fa-paperclip"></i>
-                        <i class="fas fa-microphone"></i>
-                        <i class="far fa-smile"></i>
+                        
+                        <div v-for="(contact,i) in contacts">
+                            <img class="avatar" v-bind:src="contact.avatar" alt="">{{contact.name}} </div>
+                        <div id="icon_func">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>        
                     </div>
                     <div id="chat_box"></div>
-                    <div id="input_message"></div>
+                    <div id="message_box">
+                        <i class="fas fa-microphone"></i>
+                        <input type="text">
+                        <i class="far fa-smile"></i>
+                    </div>
                 </div>
             </div>
             
