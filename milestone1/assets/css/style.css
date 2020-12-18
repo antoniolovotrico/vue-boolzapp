@@ -87,6 +87,7 @@ header {
 #column_contact{  
     height: 65%;
     background-color: white;
+    overflow-y: scroll;
 }
 
 .avatar{
@@ -105,6 +106,7 @@ header {
 #chat_box {
     height: 80%;
     background: url(../img/sfondo_chat.jpg);
+    overflow-y: scroll;
 }
 
 #message_box {
@@ -163,3 +165,33 @@ li {
     padding: 20px;
 }
 
+.bubble_sent{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+#bubble_sent{
+    background-color:#D5F9BA ;
+    padding: 15px;
+    border-radius: 10px;
+    
+    
+}
+
+.bubble_received{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+#bubble_received{
+    background-color:white ;
+    padding: 15px;
+    border-radius: 10px;   
+}
+
+h6 {
+    padding-top: 15px;
+    float: right;
+}

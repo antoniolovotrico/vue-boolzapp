@@ -11,12 +11,12 @@ let app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs(),
+                        date: dayjs().format("H:mm"),
                         text: "How do you feel carring the world on your shoulder?",
                         status: "sent"
                     },
                     {
-                        date: dayjs().format(),
+                        date: dayjs().format("H:mm"),
                         text: "I feel like always mate",
                         status: "received"
                     }
@@ -29,12 +29,12 @@ let app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs().format(),
+                        date: dayjs().format("H:mm"),
                         text: "How do you feel carring the world on your shoulder?",
                         status: "sent"
                     },
                     {
-                        date: dayjs().format(),
+                        date: dayjs().format("H:mm"),
                         text: "I feel like always mate",
                         status: "received"
                     }
@@ -48,12 +48,12 @@ let app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs(),
+                        date: dayjs().format("H:mm"),
                         text: "How do you feel carring the world on your shoulder?",
                         status: "sent"
                     },
                     {
-                        date: dayjs().format(),
+                        date: dayjs().format("H:mm"),
                         text: "I feel like always mate",
                         status: "received"
                     }
@@ -67,12 +67,12 @@ let app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs(),
+                        date: dayjs().format("H:mm"),
                         text: "How do you feel carring the world on your shoulder?",
                         status: "sent"
                     },
                     {
-                        date: dayjs().format(),
+                        date: dayjs().format("H:mm"),
                         text: "I feel like always mate",
                         status: "received"
                     }
@@ -86,12 +86,12 @@ let app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs(),
+                        date: dayjs().format("H:mm"),
                         text: "How do you feel carring the world on your shoulder?",
                         status: "sent"
                     },
                     {
-                        date: dayjs().format(),
+                        date: dayjs().format("H:mm"),
                         text: "I feel like always mate",
                         status: "received"
                     }
@@ -105,12 +105,12 @@ let app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs(),
+                        date: dayjs().format("H:mm"),
                         text: "How do you feel carring the world on your shoulder?",
                         status: "sent"
                     },
                     {
-                        date: dayjs().format(),
+                        date: dayjs().format("H:mm"),
                         text: "I feel like always mate",
                         status: "received"
                     }
@@ -124,12 +124,12 @@ let app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs(),
+                        date: dayjs().format("H:mm"),
                         text: "How do you feel carring the world on your shoulder?",
                         status: "sent"
                     },
                     {
-                        date: dayjs().format(),
+                        date: dayjs().format("H:mm"),
                         text: "I feel like always mate",
                         status: "received"
                     }
@@ -143,12 +143,12 @@ let app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs(),
+                        date: dayjs().format("H:mm"),
                         text: "How do you feel carring the world on your shoulder?",
                         status: "sent"
                     },
                     {
-                        date: dayjs().format(),
+                        date: dayjs().format("H:mm"),
                         text: "I feel like always mate",
                         status: "received"
                     }
