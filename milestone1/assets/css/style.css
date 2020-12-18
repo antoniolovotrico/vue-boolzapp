@@ -3,12 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+#sfondo{
+    position: relative;
+}
 
-header{
-    height: 150px;
+#top_green{
+    height: 20vh;
     background-color: #019688;
 }
 #background{
-    height: 100vh;
+    height: 80vh;
     background-color: #DBDBD5;
+    display: flex;
+    justify-content: center;
+}
+#app_container{
+    height: 90vh;
+    width: 80vw;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
