@@ -54,7 +54,7 @@ header {
 }
 #column_info{
     height: 15%;
-    background-color: green;
+    background-color: #8EDAFC;
 }
 #column_search{  
     height: 10%;
@@ -73,7 +73,7 @@ nav {
 }
 
 .avatar{
-    width: 20%;
+    width: 50px;
     border-radius: 100%;   
 }
 
@@ -82,11 +82,12 @@ nav {
     display: flex;
     align-items: center;
     border-left: 1px solid grey;
+    justify-content: space-between;
 }
 
 #chat_box {
     height: 80%;
-    background-color: brown;
+    background: url(../img/sfondo_chat.jpg);
 }
 
 #message_box {
@@ -101,3 +102,9 @@ i{
     font-size: 2rem;
     color: grey;  
 }
+#avatar_name{
+    display: flex;
+    align-items: center;
+
+}
+

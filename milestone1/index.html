@@ -30,10 +30,12 @@
                     <div id="column_contact"></div>
                 </div>
                 <div id="app_container_right">
-                    <div id="chat_title">
-                        
-                        <div v-for="(contact,i) in contacts">
-                            <img class="avatar" v-bind:src="contact.avatar" alt="">{{contact.name}} </div>
+                    <div id="chat_title" v-for="(contact,i) in contacts"> 
+                        <div id="avatar_name">
+                            <img class="avatar" v-bind:src="contact.avatar" alt="">
+                            <h3>{{contact.name}} <br>{{"Ultimo accesso oggi alle"}}{{contact.messages[0].date}} </h>
+                            <h3></h3>
+                        </div>
                         <div id="icon_func">
                             <i class="fas fa-search"></i>
                             <i class="fas fa-paperclip"></i>

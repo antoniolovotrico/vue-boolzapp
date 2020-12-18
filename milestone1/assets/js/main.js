@@ -11,7 +11,7 @@ let app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs().format(),
+                        date: dayjs(),
                         text: "How do you feel carring the world on your shoulder?",
                         status: "sent"
                     },
@@ -23,24 +23,24 @@ let app = new Vue ({
                 ]
              
             },
-            {
-                name: "Ennio",
-                avatar: "./assets/img/avatar_2.jpg",
-                visible: true,
-                messages: [
-                    {
-                        date: dayjs().format(),
-                        text: "How do you feel carring the world on your shoulder?",
-                        status: "sent"
-                    },
-                    {
-                        date: dayjs().format(),
-                        text: "I feel like always mate",
-                        status: "received"
-                    }
-                ]
+            // {
+            //     name: "Ennio",
+            //     avatar: "./assets/img/avatar_2.jpg",
+            //     visible: true,
+            //     messages: [
+            //         {
+            //             date: dayjs().format(),
+            //             text: "How do you feel carring the world on your shoulder?",
+            //             status: "sent"
+            //         },
+            //         {
+            //             date: dayjs().format(),
+            //             text: "I feel like always mate",
+            //             status: "received"
+            //         }
+            //     ]
                
-            }  
+            // }  
         ]    
 
         
