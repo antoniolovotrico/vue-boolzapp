@@ -29,13 +29,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: "lato";
 }
 
 #app_container_left{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 30%;
+    width: 35%;
     background-color: #EAEAEA;
 }
 
@@ -43,7 +44,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 70%;
+    width: 65%;
     background-color: #EAEAEA;
 }
 
@@ -51,25 +52,41 @@ header {
     display: flex;
     height: 10%; 
     align-items: center;
+    justify-content: space-around;
 }
 #column_info{
+    display: flex;
+    align-items: center;
     height: 15%;
     background-color: #8EDAFC;
+    justify-content: space-around;
+}
+#bell {
+    background-color: white;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    padding: 15px;
+    color: #8EDAFC;
 }
 #column_search{  
     height: 10%;
-    background-color: grey;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#input_search {
+    width: 80%;
+    height: 50%;
+    text-align: center;
+    color: grey;
+    border: 1px solid transparent;
+    border-radius: 5px;
 }
 
 #column_contact{  
     height: 65%;
-    background-color: blue;
-}
-
-nav {
-    display: flex;
-    align-items: center; 
-    justify-content: space-around;   
+    background-color: white;
 }
 
 .avatar{
@@ -82,7 +99,7 @@ nav {
     display: flex;
     align-items: center;
     border-left: 1px solid grey;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #chat_box {
@@ -93,18 +110,56 @@ nav {
 #message_box {
     display: flex;
     height: 10%;
-    background-color: violet;
-    justify-content: space-between;
+    background-color: #F3EEEA;
+    justify-content: space-around;
     align-items: center;
 }
 
 i{
-    font-size: 2rem;
-    color: grey;  
+    font-size: 1.8rem;
+    color: grey;
+    padding: 10px;  
 }
 #avatar_name{
     display: flex;
     align-items: center;
+}
 
+h5 {
+    color: grey;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: grey;
+}
+
+#input_message {
+    width: 80%;
+    height: 50%;
+    border-radius: 10px;
+    border: 0px transparent;
+}
+
+h3 {
+    padding: 0 20px;
+}
+
+.title_sub {
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
 

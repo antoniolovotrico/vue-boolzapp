@@ -23,24 +23,138 @@ let app = new Vue ({
                 ]
              
             },
-            // {
-            //     name: "Ennio",
-            //     avatar: "./assets/img/avatar_2.jpg",
-            //     visible: true,
-            //     messages: [
-            //         {
-            //             date: dayjs().format(),
-            //             text: "How do you feel carring the world on your shoulder?",
-            //             status: "sent"
-            //         },
-            //         {
-            //             date: dayjs().format(),
-            //             text: "I feel like always mate",
-            //             status: "received"
-            //         }
-            //     ]
+            {
+                name: "Alfredo",
+                avatar: "./assets/img/avatar_3.jpg",
+                visible: true,
+                messages: [
+                    {
+                        date: dayjs().format(),
+                        text: "How do you feel carring the world on your shoulder?",
+                        status: "sent"
+                    },
+                    {
+                        date: dayjs().format(),
+                        text: "I feel like always mate",
+                        status: "received"
+                    }
+                ]
                
-            // }  
+            },
+            {
+                name: "Ennio",
+                avatar: "./assets/img/avatar_4.jpg",
+                
+                visible: true,
+                messages: [
+                    {
+                        date: dayjs(),
+                        text: "How do you feel carring the world on your shoulder?",
+                        status: "sent"
+                    },
+                    {
+                        date: dayjs().format(),
+                        text: "I feel like always mate",
+                        status: "received"
+                    }
+                ]
+             
+            },
+            {
+                name: "Marco",
+                avatar: "./assets/img/avatar_5.jpg",
+                
+                visible: true,
+                messages: [
+                    {
+                        date: dayjs(),
+                        text: "How do you feel carring the world on your shoulder?",
+                        status: "sent"
+                    },
+                    {
+                        date: dayjs().format(),
+                        text: "I feel like always mate",
+                        status: "received"
+                    }
+                ]
+             
+            },
+            {
+                name: "Paola",
+                avatar: "./assets/img/avatar_6.jpg",
+                
+                visible: true,
+                messages: [
+                    {
+                        date: dayjs(),
+                        text: "How do you feel carring the world on your shoulder?",
+                        status: "sent"
+                    },
+                    {
+                        date: dayjs().format(),
+                        text: "I feel like always mate",
+                        status: "received"
+                    }
+                ]
+             
+            },
+            {
+                name: "Francesco",
+                avatar: "./assets/img/avatar_7.jpg",
+                
+                visible: true,
+                messages: [
+                    {
+                        date: dayjs(),
+                        text: "How do you feel carring the world on your shoulder?",
+                        status: "sent"
+                    },
+                    {
+                        date: dayjs().format(),
+                        text: "I feel like always mate",
+                        status: "received"
+                    }
+                ]
+             
+            },
+            {
+                name: "Andrea",
+                avatar: "./assets/img/avatar_8.jpg",
+                
+                visible: true,
+                messages: [
+                    {
+                        date: dayjs(),
+                        text: "How do you feel carring the world on your shoulder?",
+                        status: "sent"
+                    },
+                    {
+                        date: dayjs().format(),
+                        text: "I feel like always mate",
+                        status: "received"
+                    }
+                ]
+             
+            },
+            {
+                name: "Marta",
+                avatar: "./assets/img/avatar_9.jpg",
+                
+                visible: true,
+                messages: [
+                    {
+                        date: dayjs(),
+                        text: "How do you feel carring the world on your shoulder?",
+                        status: "sent"
+                    },
+                    {
+                        date: dayjs().format(),
+                        text: "I feel like always mate",
+                        status: "received"
+                    }
+                ]
+             
+            },  
         ]    
 
         

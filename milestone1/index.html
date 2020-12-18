@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
@@ -17,24 +18,49 @@
             <div id="app_container">
                 <div id="app_container_left">
                     <header>
-                        <nav>
+                    
+                        <div class="title">
                             <img v-bind:src="userImg" class="avatar" alt="">
-                            <h1>{{myName}}</h1>
+                            <h3>{{myName}}</h3>
+                        </div>
+                        <div>
                             <i class="fas fa-circle-notch"></i>
                             <i class="fas fa-comment-alt"></i>
-                            <i class="fas fa-ellipsis-v"></i>    
-                        </nav>       
+                            <i class="fas fa-ellipsis-v"></i>  
+                        </div>  
+                          
                     </header>
-                    <div id="column_info"></div>
-                    <div id="column_search"></div>
-                    <div id="column_contact"></div>
+                    <div id="column_info">
+                        <i id="bell" class="fas fa-bell-slash"></i>
+                        <div class="title_sub">
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            <a href="">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <div id="column_search">
+                        <input id="input_search"  type="text" value="🔎 Cerca o inizia una nuova chat">
+                    </div>
+                    <ul id="column_contact">
+                        <li v-for="(contact,i) in contacts">
+                            <img class="avatar" v-bind:src="contact.avatar" alt="">
+                            <div class="title_sub">
+                                <h4>{{contact.name}}</h4>
+                                <h5>{{contact.messages[0].date}} </h5>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
                 <div id="app_container_right">
                     <div id="chat_title" v-for="(contact,i) in contacts"> 
                         <div id="avatar_name">
                             <img class="avatar" v-bind:src="contact.avatar" alt="">
-                            <h3>{{contact.name}} <br>{{"Ultimo accesso oggi alle"}}{{contact.messages[0].date}} </h>
-                            <h3></h3>
+                            <div class="title_sub">
+                                <h4>{{contact.name}}</h4>
+                                <h5>{{"Ultimo accesso oggi alle"}}{{contact.messages[0].date}} </h5>
+                            </div>
+                            
+                            
                         </div>
                         <div id="icon_func">
                             <i class="fas fa-search"></i>
@@ -45,7 +71,7 @@
                     <div id="chat_box"></div>
                     <div id="message_box">
                         <i class="fas fa-microphone"></i>
-                        <input type="text">
+                        <input id="input_message" type="text">
                         <i class="far fa-smile"></i>
                     </div>
                 </div>
