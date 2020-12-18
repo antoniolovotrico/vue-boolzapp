@@ -1,6 +1,8 @@
 let app = new Vue ({
     el: "#app",
     data: {
+        userImg: "./assets/img/avatar_2.jpg",
+        myName: "Antonio",
         contacts: [ 
             {
                 name: "Roberto",
