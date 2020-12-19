@@ -108,6 +108,12 @@ header {
     background: url(../img/sfondo_chat.jpg);
     overflow-y: scroll;
 }
+#nochat_box {
+    height: 80%;
+    background: url(../img/noselection.png);
+    background-size: cover;
+    overflow-y: scroll;
+}
 
 #message_box {
     display: flex;
