@@ -3,6 +3,7 @@ let app = new Vue ({
     data: {
         userImg: "./assets/img/avatar_2.jpg",
         myName: "Antonio",
+        activeContacts: [],
         contacts: [ 
             {
                 name: "Roberto",
@@ -158,5 +159,11 @@ let app = new Vue ({
         ]    
 
         
+    },
+    methods: {
+        activeFunc(contact,i){
+            let act = contact[i]
+            this.activeContacts.push(act);
+        }
     }
 })

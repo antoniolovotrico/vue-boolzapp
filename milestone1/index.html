@@ -41,7 +41,7 @@
                         <input id="input_search"  type="text" value="🔎 Cerca o inizia una nuova chat">
                     </div>
                     <ul id="column_contact">
-                        <li v-for="(contact,i) in contacts">
+                        <li v-for="contact in contacts" @click="activeFunc">
                             <img class="avatar" v-bind:src="contact.avatar" alt="">
                             <div class="title_sub">
                                 <h4>{{contact.name}}</h4>
@@ -50,18 +50,21 @@
                         </li>
 
                     </ul>
+
                 </div>
                 <div id="app_container_right">
-                    <div id="chat_title" v-for="(contact,i) in contacts"> 
-                        <div id="avatar_name">
-                            <img class="avatar" v-bind:src="contact.avatar" alt="">
-                            <div class="title_sub">
-                                <h4>{{contact.name}}</h4>
-                                <h5>{{"Ultimo accesso oggi alle "}}{{contact.messages[0].date}} </h5>
-                            </div>
+                    <div id="chat_title"> 
+                        <ul id="avatar_name" >
+                            <li>
+                                <img class="avatar" v-bind:src="contacts[0].avatar" alt="">
+                                <div class="title_sub">
+                                    <h4>{{contacts[0].name}}</h4>
+                                    <h5>{{"Ultimo accesso oggi alle "}}{{contacts[0].messages[0].date}} </h5>
+                                </div>
+                            </li>
                             
-                            
-                        </div>
+                        </ul>
+                        
                         <div id="icon_func">
                             <i class="fas fa-search"></i>
                             <i class="fas fa-paperclip"></i>
@@ -69,11 +72,11 @@
                         </div>        
                     </div>
                     <ul id="chat_box">
-                        <li class="bubble_sent" v-for="(message,i) in contacts">  
-                            <span id="bubble_sent">{{message.messages[0].text}}<h6>{{message.messages[0].date}}</h6> </span>   
+                        <li class="bubble_sent">  
+                            <span id="bubble_sent">{{contacts[0].messages[0].text}}<h6>{{contacts[0].messages[0].date}}</h6> </span>  
                         </li>
-                        <li class="bubble_received" v-for="(message,i) in contacts">  
-                            <span id="bubble_received">{{message.messages[1].text}} <h6>{{message.messages[0].date}}</h6></span>   
+                        <li class="bubble_received">  
+                            <span id="bubble_received">{{contacts[0].messages[1].text}} <h6>{{contacts[0].messages[0].date}}</h6></span>   
                         </li>
                     </ul>
                     <div id="message_box">
