@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div id="column_search">
-                        <input id="input_search"  type="text" placeholder="🔎 Cerca o inizia una nuova chat">
+                        <input id="input_search"  type="text" placeholder="🔎 Cerca o inizia una nuova chat" v-model="search">
                     </div>
                     <ul id="column_contact">
                         <li v-for="(contact,i) in contacts" @click="activeFunc(i)">

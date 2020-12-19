@@ -1,3 +1,5 @@
+
+
 let app = new Vue ({
     el: "#app",
     data: {
@@ -8,6 +10,7 @@ let app = new Vue ({
         activeContacts: [],
         answMess: "ok",
         arrAnsw:[],
+        search: "",
         contacts: [ 
             {
                 name: "Roberto",
@@ -167,18 +170,26 @@ let app = new Vue ({
     methods: {
         activeFunc(i){
             let act = this.contacts[i];
-            this.activeContacts.unshift(act);           
+            this.activeContacts.splice(0,1,act); 
+            this.arrMess.splice(0,5);
+            this.arrAnsw.splice(0,5);        
         },
         autoFunc(){
             
             this.arrAnsw.unshift(this.answMess);
         },
         messFunc(){
-            
+
+            //this.text.push(this.newMess);
             this.arrMess.push(this.newMess);
             setTimeout(this.autoFunc, 1000);
             
-        }
+         },
+        // searchFunc(){
+        //     this.contacts.name.indexOf(search);
+            
+
+        // }
 
     }
 })
