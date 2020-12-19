@@ -3,7 +3,26 @@ let app = new Vue ({
     data: {
         userImg: "./assets/img/avatar_2.jpg",
         myName: "Antonio",
-        activeContacts: [],
+        activeContacts: [
+            {
+            name: "Andrea",
+            avatar: "./assets/img/avatar_8.jpg",
+            
+            visible: true,
+            messages: [
+                {
+                    date: dayjs().format("H:mm"),
+                    text: "How do you feel carring the world on your shoulder?",
+                    status: "sent"
+                },
+                {
+                    date: dayjs().format("H:mm"),
+                    text: "I feel like always mate",
+                    status: "received"
+                }
+            ]
+         
+        }],
         contacts: [ 
             {
                 name: "Roberto",
@@ -13,12 +32,12 @@ let app = new Vue ({
                 messages: [
                     {
                         date: dayjs().format("H:mm"),
-                        text: "How do you feel carring the world on your shoulder?",
+                        text: "gnegne?",
                         status: "sent"
                     },
                     {
                         date: dayjs().format("H:mm"),
-                        text: "I feel like always mate",
+                        text: "yuppyyyy",
                         status: "received"
                     }
                 ]
@@ -161,9 +180,9 @@ let app = new Vue ({
         
     },
     methods: {
-        activeFunc(contact,i){
-            let act = contact[i]
-            this.activeContacts.push(act);
+        activeFunc(i){
+            let act = this.contacts.splice(i,1);
+            this.activeContacts.unshift(act[i]);           
         }
     }
 })
