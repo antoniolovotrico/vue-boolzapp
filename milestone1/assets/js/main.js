@@ -3,7 +3,11 @@ let app = new Vue ({
     data: {
         userImg: "./assets/img/avatar_2.jpg",
         myName: "Antonio",
+        newMess:"",
+        arrMess: [],
         activeContacts: [],
+        answMess: "ok",
+        arrAnsw:[],
         contacts: [ 
             {
                 name: "Roberto",
@@ -164,6 +168,17 @@ let app = new Vue ({
         activeFunc(i){
             let act = this.contacts[i];
             this.activeContacts.unshift(act);           
+        },
+        autoFunc(){
+            
+            this.arrAnsw.unshift(this.answMess);
+        },
+        messFunc(){
+            
+            this.arrMess.push(this.newMess);
+            setTimeout(this.autoFunc, 1000);
+            
         }
+
     }
 })

@@ -177,7 +177,7 @@ li {
     
 }
 
-#bubble_sent{
+.bubby_sent{
     background-color:#D5F9BA ;
     padding: 15px;
     border-radius: 10px;
@@ -191,7 +191,7 @@ li {
     
 }
 
-#bubble_received{
+.bubby_received{
     background-color:white ;
     padding: 15px;
     border-radius: 10px;   
