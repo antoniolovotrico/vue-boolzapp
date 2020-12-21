@@ -179,17 +179,24 @@ let app = new Vue ({
             this.arrAnsw.unshift(this.answMess);
         },
         messFunc(){
+            
 
-            //this.text.push(this.newMess);
-            this.arrMess.push(this.newMess);
+            
+            let prova = this.activeContacts[0].messages;
+           
+
+            prova.splice(2,0,{newText:this.newMess ,date: dayjs().format("H:mm"),status: "sent"});
+            console.log(this.activeContacts[0].messages[2].newText);
+            
             setTimeout(this.autoFunc, 1000);
+            this.arrMess.push(this.newMess)
+            console.log(this.arrMess);
             
          },
         // searchFunc(){
         //     this.contacts.name.indexOf(search);
             
-
-        // }
+        
 
     }
 })

@@ -64,35 +64,41 @@
                             </li>
                             
                         </ul>
-                        <span v-else>d</span>
+                        <span v-else></span>
                         <div id="icon_func">
                             <i class="fas fa-search"></i>
                             <i class="fas fa-paperclip"></i>
                             <i class="fas fa-ellipsis-v"></i>
                         </div>        
                     </div>
-                    <ul id="chat_box" v-if="activeContacts.length > 0">
-                        <li class="bubble_sent">  
-                            <span class="bubby_sent">{{activeContacts[0].messages[0].text}}<h6>{{activeContacts[0].messages[0].date}}</h6> </span> 
-                              
-                        </li>
-                        
-                        <li class="bubble_received">  
-                            <span class="bubby_received">{{activeContacts[0].messages[1].text}} <h6>{{activeContacts[0].messages[0].date}}</h6></span> 
+                    <div class="chat_box" v-if="activeContacts.length > 0">
+                        <ul>
+                            <li class="bubble_sent">  
+                                <span class="bubby_sent"> {{activeContacts[0].messages[0].text}}<h6>{{activeContacts[0].messages[0].date}}</h6> </span> 
+                                
+                            </li>
                             
-                        </li>
-                        <li class="bubble_sent" v-if="arrMess.length > 0" v-for="(mess ,i) in arrMess">  
-                             
-                            <span class="bubby_sent">{{arrMess[i]}}<h6>{{activeContacts[0].messages[0].date}}</h6></span>   
-                        </li>
-                        <li class="bubble_received" v-if="arrMess.length > 0" v-for="(answ ,i) in arrAnsw">  
-                             
-                            <span class="bubby_received">{{arrAnsw[i]}}<h6>{{activeContacts[0].messages[0].date}}</h6></span>   
-                        </li>
-                    </ul>
-                    <ul id="nochat_box" v-else>
-                        
-                    </ul>
+                            <li class="bubble_received">  
+                                <span class="bubby_received"> {{activeContacts[0].messages[1].text}} <h6>{{activeContacts[0].messages[0].date}}</h6> </span> 
+                                
+                            </li>
+                        </ul>
+                    
+                        <ul v-for="(missy,i) in arrMess">
+                            <li class="bubble_sent" v-if="arrMess.length > 0"  >  
+                                
+                                <span class="bubby_sent"> {{activeContacts[0].messages[2].newText}}<h6>{{contacts[0].messages[2].date}}</h6> </span>   
+                            </li>
+                            <li class="bubble_received" v-if="arrMess.length > 0">  
+                                
+                                <span class="bubby_received" v-if="arrAnsw.length > 0"> {{arrAnsw[0]}}<h6>{{activeContacts[0].messages[2].date}}</h6> </span>  
+                                <span v-else></span> 
+                            </li>
+                        </ul>
+                            
+                    
+                    </div>
+                    <div id="nochat_box" v-else></div>
                     <div id="message_box">
                         <i class="fas fa-microphone"></i>
                         <input id="input_message" v-model="newMess" @keyup.enter="messFunc" type="text">
