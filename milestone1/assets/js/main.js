@@ -7,7 +7,8 @@ let app = new Vue ({
         myName: "Antonio",
         newMess:"",
         arrMess: [],
-        activeContacts: [],
+        activeContacts: 0,
+        visib: false,
         answMess: "ok",
         arrAnsw:[],
         search: "",
@@ -169,10 +170,13 @@ let app = new Vue ({
     },
     methods: {
         activeFunc(i){
-            let act = this.contacts[i];
-            this.activeContacts.splice(0,1,act); 
-            this.arrMess.splice(0,5);
-            this.arrAnsw.splice(0,5);        
+            this.activeContacts = i;
+            this.visib = true;
+            console.log(this.activeContacts);
+            // let act = this.contacts[i];
+            // this.activeContacts.splice(0,1,act); 
+            // this.arrMess.splice(0,5);
+            // this.arrAnsw.splice(0,5);        
         },
         autoFunc(){
             
@@ -180,13 +184,10 @@ let app = new Vue ({
         },
         messFunc(){
             
-
+            let prova = this.contacts["messages"];
             
-            let prova = this.activeContacts[0].messages;
-           
-
-            prova.splice(2,0,{newText:this.newMess ,date: dayjs().format("H:mm"),status: "sent"});
-            console.log(this.activeContacts[0].messages[2].newText);
+            prova.push({newText:this.newMess ,date: dayjs().format("H:mm"),status: "sent"});
+            console.log(this.activeContacts.messages);
             
             setTimeout(this.autoFunc, 1000);
             this.arrMess.push(this.newMess)

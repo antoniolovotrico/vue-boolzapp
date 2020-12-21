@@ -107,6 +107,7 @@ header {
     height: 80%;
     background: url(../img/sfondo_chat.jpg);
     overflow-y: scroll;
+    
 }
 #nochat_box {
     height: 80%;
@@ -171,30 +172,35 @@ li {
     padding: 20px;
 }
 
-.bubble_sent{
+.chat_bubble_sent{
     display: flex;
     justify-content: flex-end;
-    
+}
+.chat_bubble_received{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bubble{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .bubby_sent{
+    width: fit-content;
     background-color:#D5F9BA ;
     padding: 15px;
     border-radius: 10px;
-    
-    
-}
-
-.bubble_received{
-    display: flex;
-    justify-content: flex-start;
-    
+    margin: 10px;
+    /* justify-content: flex-end; */
 }
 
 .bubby_received{
+    width: fit-content;
     background-color:white ;
     padding: 15px;
-    border-radius: 10px;   
+    border-radius: 10px; 
+    margin: 10px;
 }
 
 h6 {

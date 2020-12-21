@@ -54,12 +54,12 @@
                 </div>
                 <div id="app_container_right">
                     <div id="chat_title"> 
-                        <ul id="avatar_name" v-if="activeContacts.length > 0" >
+                        <ul id="avatar_name" v-if="visib">
                             <li>
-                                <img class="avatar" v-bind:src="activeContacts[0].avatar" alt="">
+                                <img class="avatar" v-bind:src="contacts[activeContacts].avatar" alt="">
                                 <div class="title_sub">
-                                    <h4>{{activeContacts[0].name}}</h4>
-                                    <h5>{{"Ultimo accesso oggi alle "}}{{activeContacts[0].messages[0].date}} </h5>
+                                    <h4>{{contacts[activeContacts].name}}</h4>
+                                    <h5>{{"Ultimo accesso oggi alle "}}{{contacts[activeContacts].date}} </h5>
                                 </div>
                             </li>
                             
@@ -71,27 +71,25 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>        
                     </div>
-                    <div class="chat_box" v-if="activeContacts.length > 0">
-                        <ul>
-                            <li class="bubble_sent">  
-                                <span class="bubby_sent"> {{activeContacts[0].messages[0].text}}<h6>{{activeContacts[0].messages[0].date}}</h6> </span> 
+                    <div class="chat_box" v-if="visib">
+                        <ul v-for="(mes,i) in contacts[activeContacts].messages" :class="mes.status === 'sent'?'chat_bubble_sent':'chat_bubble_received'">
+                            <li class="bubble" :class="mes.status === 'sent'?'bubby_sent':'bubby_received'">  
+                                <div> {{mes.text}}<h6>{{mes.date}}</h6> </div> 
+                                <!-- <div> {{mes.text}} <h6>{{mes.date}}</h6> </div>  -->
                                 
                             </li>
                             
-                            <li class="bubble_received">  
-                                <span class="bubby_received"> {{activeContacts[0].messages[1].text}} <h6>{{activeContacts[0].messages[0].date}}</h6> </span> 
-                                
-                            </li>
+                           
                         </ul>
                     
-                        <ul v-for="(missy,i) in arrMess">
-                            <li class="bubble_sent" v-if="arrMess.length > 0"  >  
+                        <ul v-for="(mes,i) in contacts[activeContacts].messages">
+                            <li class="bubble_sent" v-if="visib">  
                                 
-                                <span class="bubby_sent"> {{activeContacts[0].messages[2].newText}}<h6>{{contacts[0].messages[2].date}}</h6> </span>   
+                                <span class="bubby_sent"> {{mes.newText}}<h6>{{mes.date}}</h6> </span>   
                             </li>
-                            <li class="bubble_received" v-if="arrMess.length > 0">  
+                            <li class="bubble_received" v-if="visib">  
                                 
-                                <span class="bubby_received" v-if="arrAnsw.length > 0"> {{arrAnsw[0]}}<h6>{{activeContacts[0].messages[2].date}}</h6> </span>  
+                                <span class="bubby_received" v-if="visib"> {{arrAnsw[0]}}<h6>{{mes.date}}</h6> </span>  
                                 <span v-else></span> 
                             </li>
                         </ul>
