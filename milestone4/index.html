@@ -17,7 +17,7 @@
             </div>
             <div id="app_container">
                 <div id="app_container_left">
-                    <header>
+                    <header @click="outFunc">
                     
                         <div class="title">
                             <img v-bind:src="userImg" class="avatar" alt="">
@@ -30,7 +30,7 @@
                         </div>  
                           
                     </header>
-                    <div id="column_info">
+                    <div id="column_info" @click="outFunc">
                         <i id="bell" class="fas fa-bell-slash"></i>
                         <div class="title_sub">
                             <h4>Ricevi notifiche di nuovi messaggi</h4>
@@ -38,21 +38,22 @@
                         </div>
                     </div>
                     <div id="column_search">
-                        <input id="input_search"  type="text" placeholder="🔎 Cerca o inizia una nuova chat" v-model="search" >
+                        <input id="input_search"  type="text" placeholder="🔎 Cerca o inizia una nuova chat" v-model="search" @click="seleFunc">
                     </div>
-                    <ul id="column_contact">
-                        <li v-for="(contact,i) in contacts" @click="activeFunc(i)" v-if="search == contact.name">
+                    <ul id="column_contact" @click="outFunc">
+                        <li v-for="(contact,i) in contacts" @click="activeFunc(i)" v-if="attiv || contact.name[0] == search">
                             <img class="avatar" v-bind:src="contact.avatar" alt="">
                             <div class="title_sub">
                                 <h4>{{contact.name}}</h4>
                                 <h5>{{contact.messages[contact.messages.length - 1].date}} </h5>
                             </div>
                         </li>
-
+                        
+                        
                     </ul>
 
                 </div>
-                <div id="app_container_right">
+                <div id="app_container_right" @click="outFunc">
                     <div id="chat_title"> 
                         <ul id="avatar_name" v-if="visib">
                             <li>

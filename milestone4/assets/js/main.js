@@ -8,6 +8,7 @@ let app = new Vue ({
         newMess:"",
         activeContacts: -1,
         visib: false,
+        attiv: true,
         search: "",
         contacts: [ 
             {
@@ -197,6 +198,12 @@ let app = new Vue ({
             
             
          },
+         outFunc(){
+             this.attiv = true;
+         },
+         seleFunc(){
+            this.attiv = false;
+         }
         // searchFunc(){
         //     this.contacts.forEach(element => {
         //         let {name,avatar,visible,messages} = element;
