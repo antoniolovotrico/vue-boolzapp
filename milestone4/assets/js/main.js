@@ -10,6 +10,7 @@ let app = new Vue ({
         visib: false,
         attiv: true,
         search: "",
+        
         contacts: [ 
             {
                 name: "roberto",
@@ -170,7 +171,7 @@ let app = new Vue ({
         activeFunc(i){
             this.activeContacts = i;
             this.visib = true;
-            console.log(this.activeContacts);
+            //console.log(this.activeContacts);
                
         },
         autoFunc(){
@@ -198,33 +199,55 @@ let app = new Vue ({
             
             
          },
-         outFunc(){
-             this.attiv = true;
-         },
-         seleFunc(){
-            this.attiv = false;
-         }
-        // searchFunc(){
-        //     this.contacts.forEach(element => {
-        //         let {name,avatar,visible,messages} = element;
-        //         //console.log(name);
+         
 
-        //         let nameSplit = name.split;
-        //         //console.log(nameSplit);
-        //         let searchSplit = this.search.split;
-        //         //console.log(searchSplit);
-        //         searchSplit.forEach(element => {
-        //             if (element == nameSplit[0]){
-        //            console.log(name);
-        //             }
-                    
-        //         });    
-        //         });
-        //     }
-        //     this.contacts.name.indexOf(search);
-            
-            
         
 
+        //  searchFunc() {
+        //      //console.log(this.contacts);
+             
+             
+        //     const filterContacts = this.contacts.filter(element => {
+        //          let {name,avatar,visible,messages} = element.name;
+        //          //console.log(element.name);
+        //          var uio = element.name;
+                 
+        //          console.log(uio);
+        //          const indexOfFirst = uio.indexOf(this.search)
+        //          console.log(indexOfFirst);
+                 
+                
+        //     })
+            
+        //  }
+
+    },
+    computed: {
+
+        filteredCustomers:function()
+        {
+            var self=this;
+            return this.contacts.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+        }
     }
+        
+                 
+                 
+                
+                 
+        
+    
+       
 })
+
+ // let search = this.search;
+                 
+                 // //console.log(searchSplit);
+                 // element["name"].length.forEach(element => {
+                 //     if (element == search){
+                 //         console.log(name);
+                 //     }
+                     
+                 // });    
+
+                  //     this.contacts.name.indexOf(search);

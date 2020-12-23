@@ -59,7 +59,7 @@ header {
     align-items: center;
     height: 15%;
     background-color: #8EDAFC;
-    justify-content: space-around;
+    justify-content: center;
 }
 #bell {
     background-color: white;
@@ -112,7 +112,7 @@ header {
 #nochat_box {
     height: 80%;
     background: url(../img/noselection.png);
-    background-size: cover;
+    background-size: contain;
     overflow-y: scroll;
 }
 
