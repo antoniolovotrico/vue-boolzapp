@@ -1,7 +1,16 @@
+/* Reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Utility Class */
+.d-flex {
+    display: flex;
+}
+.center-align {
+    align-items: center;
 }
 
 #sfondo{
@@ -16,12 +25,10 @@
 #background{
     height: 80vh;
     background-color: #DBDBD5;
-    display: flex;
     justify-content: center;
 }
 
 #app_container{
-    display: flex;
     height: 90vh;
     width: 80vw;
     background-color: #EAEAEA;
@@ -33,7 +40,6 @@
 }
 
 #app_container_left{
-    display: flex;
     flex-direction: column;
     height: 100%;
     width: 35%;
@@ -41,7 +47,6 @@
 }
 
 #app_container_right{
-    display: flex;
     flex-direction: column;
     height: 100%;
     width: 65%;
@@ -49,14 +54,10 @@
 }
 
 header {
-    display: flex;
     height: 10%; 
-    align-items: center;
     justify-content: space-around;
 }
 #column_info{
-    display: flex;
-    align-items: center;
     height: 15%;
     background-color: #8EDAFC;
     justify-content: center;
@@ -71,8 +72,6 @@ header {
 #column_search{  
     height: 10%;
     background-color: #EAEAEA;
-    display: flex;
-    align-items: center;
     justify-content: center;
 }
 #input_search {
@@ -97,8 +96,6 @@ header {
 
 #chat_title {
     height: 10%;
-    display: flex;
-    align-items: center;
     border-left: 1px solid grey;
     justify-content: space-around;
 }
@@ -117,11 +114,9 @@ header {
 }
 
 #message_box {
-    display: flex;
     height: 10%;
     background-color: #F3EEEA;
     justify-content: space-around;
-    align-items: center;
 }
 
 i{
@@ -129,10 +124,7 @@ i{
     color: grey;
     padding: 10px;  
 }
-#avatar_name{
-    display: flex;
-    align-items: center;
-}
+
 h3 {
     padding: 0 20px;
 }
@@ -150,10 +142,6 @@ h6 {
     padding-top: 15px;
     float: right;
 }
-.title {
-    display: flex;
-    align-items: center;
-}
 
 a {
     color: grey;
@@ -166,8 +154,6 @@ a {
     border: 0px transparent;
 }
 
-
-
 .title_sub {
     padding: 0 20px;
 }
@@ -177,22 +163,17 @@ ul {
 }
 
 li {
-    display: flex;
-    align-items: center;
     padding: 20px;
 }
 
 .chat_bubble_sent{
-    display: flex;
     justify-content: flex-end;
 }
 .chat_bubble_received{
-    display: flex;
     justify-content: flex-start;
 }
 
 .bubble{
-    display: flex;
     justify-content: space-evenly;
 }
 
@@ -202,7 +183,6 @@ li {
     padding: 15px;
     border-radius: 10px;
     margin: 10px;
-    /* justify-content: flex-end; */
 }
 
 .bubby_received{
@@ -214,7 +194,7 @@ li {
 }
 
 
-/* width */
+/* scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
   }

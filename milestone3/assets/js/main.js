@@ -1,14 +1,19 @@
-
-
+// Initialize Vue Istance
 let app = new Vue ({
     el: "#app",
     data: {
+        // insert in data image and name of my contact
         userImg: "./assets/img/avatar_2.jpg",
         myName: "Antonio",
+        // insert in data new message plugged with v-model input message
         newMess:"",
+        // add index called active contact to data to show active contac when clicked
         activeContacts: -1,
+        // add data visib to show image of no contacts selected
         visib: false,
+        // insert in data new message plugged with v-model input search
         search: "",
+        // data list of my contacts
         contacts: [ 
             {
                 name: "roberto",
@@ -161,63 +166,42 @@ let app = new Vue ({
                 ]
              
             },  
-        ]    
-
-        
+        ]          
     },
     methods: {
-        activeFunc(i){
+        //this function will show the chat box of contact clicked based on his index
+        activeFunc:function(i)
+        {
             this.activeContacts = i;
             this.visib = true;
-            console.log(this.activeContacts);
-               
         },
-        autoFunc(){
-            
+        //this function will auto answer ok when we send a message
+        autoFunc:function()
+        {       
             let message = {text:"ok" ,date: dayjs().format("H:mm"),status: "received"};
-
             this.
             contacts[this.activeContacts].
             messages.
             push(message);
         },
-        messFunc(){
-            
-        
+        //this is the function to send message
+        messFunc:function()
+        {
             let message = {text:this.newMess ,date: dayjs().format("H:mm"),status: "sent"};
-
             this.
             contacts[this.activeContacts].
             messages.
             push(message);
-            
             setTimeout(this.autoFunc, 1000);
-            
-            this.newMess="";
-            
-            
-         },
-        // searchFunc(){
-        //     this.contacts.forEach(element => {
-        //         let {name,avatar,visible,messages} = element;
-        //         //console.log(name);
-
-        //         let nameSplit = name.split;
-        //         //console.log(nameSplit);
-        //         let searchSplit = this.search.split;
-        //         //console.log(searchSplit);
-        //         searchSplit.forEach(element => {
-        //             if (element == nameSplit[0]){
-        //            console.log(name);
-        //             }
-                    
-        //         });    
-        //         });
-        //     }
-        //     this.contacts.name.indexOf(search);
-            
-            
-        
-
-    }
+            this.newMess="";     
+         }
+    },
+    computed: {
+        //this function will search and show only contacts with letters in common with our digits in search input
+        filteredCustomers:function()
+        {
+            var self=this;
+            return this.contacts.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+        }
+    }            
 })
