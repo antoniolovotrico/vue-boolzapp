@@ -174,13 +174,14 @@ let app = new Vue ({
         {
             this.activeContacts = i;
             this.visib = true;
+            
         },
         //this function will auto answer ok when we send a message
         autoFunc:function()
         {       
             let message = {text:"ok" ,date: dayjs().format("H:mm"),status: "received"};
             this.
-            contacts[this.activeContacts].
+            filteredContacts[this.activeContacts].
             messages.
             push(message);
         },
@@ -189,7 +190,7 @@ let app = new Vue ({
         {
             let message = {text:this.newMess ,date: dayjs().format("H:mm"),status: "sent"};
             this.
-            contacts[this.activeContacts].
+            filteredContacts[this.activeContacts].
             messages.
             push(message);
             setTimeout(this.autoFunc, 1000);
