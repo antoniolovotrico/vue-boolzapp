@@ -97,14 +97,17 @@ header {
 #chat_title {
     height: 10%;
     border-left: 1px solid grey;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+#icon_func {
+    padding-right: 20px;
 }
 
 .chat_box {
     height: 80%;
     background: url(../img/sfondo_chat.jpg);
-    overflow-y: scroll;
-    
+    overflow-y: scroll;   
 }
 #nochat_box {
     height: 80%;
