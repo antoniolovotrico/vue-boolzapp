@@ -96,7 +96,7 @@ header {
 
 #chat_title {
     height: 10%;
-    border-left: 1px solid grey;
+    border-left: 1px solid lightgrey;
     justify-content: space-between;
 }
 

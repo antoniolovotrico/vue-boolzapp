@@ -175,6 +175,7 @@ let app = new Vue ({
             this.activeContacts = i;
             this.visib = true;
             
+            
         },
         //this function will auto answer ok when we send a message
         autoFunc:function()
@@ -202,8 +203,9 @@ let app = new Vue ({
         filteredContacts:function()
         {
             var self=this;
+            this.visib = false;
             return this.contacts.filter(function(cont){
-                return cont.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;
+                return cont.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;   
             });
         }
     }            
