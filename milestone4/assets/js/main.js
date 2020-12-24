@@ -198,10 +198,12 @@ let app = new Vue ({
     },
     computed: {
         //this function will search and show only contacts with letters in common with our digits in search input
-        filteredCustomers:function()
+        filteredContacts:function()
         {
             var self=this;
-            return this.contacts.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+            return this.contacts.filter(function(cont){
+                return cont.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;
+            });
         }
     }            
 })
