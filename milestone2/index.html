@@ -51,13 +51,13 @@
 
                     <!-- search section -->
                     <div id="column_search" class="d-flex center-align">
-                        <input id="input_search"  type="text" placeholder="🔎 Cerca o inizia una nuova chat" v-model="search">
+                        <input id="input_search"  type="text" placeholder="🔎 Cerca o inizia una nuova chat">
                     </div>
                     <!-- //search section -->
 
                     <!-- contacts section -->
                     <ul id="column_contact">
-                        <li v-for="(contact,i) in filteredCustomers" @click="activeFunc(i)" class="d-flex center-align">
+                        <li v-for="(contact,i) in contacts" @click="activeFunc(i)" class="d-flex center-align">
                             <img class="avatar" v-bind:src="contact.avatar" alt="">
                             <div class="title_sub">
                                 <h4>{{contact.name}}</h4>
@@ -109,9 +109,9 @@
                     
                     <!-- Bar of messages to write -->
                     <div id="message_box" class="d-flex center-align">
-                        <i class="fas fa-microphone"></i>
-                        <input id="input_message" v-model="newMess" @keyup.enter="messFunc" type="text">
                         <i class="far fa-smile"></i>
+                        <input id="input_message" type="text">
+                        <i class="fas fa-microphone"></i>     
                     </div>
                     <!-- //Bar of messages to write -->
                 </div>

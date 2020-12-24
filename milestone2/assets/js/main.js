@@ -6,13 +6,9 @@ let app = new Vue ({
         userImg: "./assets/img/avatar_2.jpg",
         myName: "Antonio",
         // insert in data new message plugged with v-model input message
-        newMess:"",
-        // add index called active contact to data to show active contac when clicked
         activeContacts: -1,
         // add data visib to show image of no contacts selected
         visib: false,
-        // insert in data new message plugged with v-model input search
-        search: "",
         // data list of my contacts
         contacts: [ 
             {
@@ -175,33 +171,5 @@ let app = new Vue ({
             this.activeContacts = i;
             this.visib = true;
         },
-        //this function will auto answer ok when we send a message
-        autoFunc:function()
-        {       
-            let message = {text:"ok" ,date: dayjs().format("H:mm"),status: "received"};
-            this.
-            contacts[this.activeContacts].
-            messages.
-            push(message);
-        },
-        //this is the function to send message
-        messFunc:function()
-        {
-            let message = {text:this.newMess ,date: dayjs().format("H:mm"),status: "sent"};
-            this.
-            contacts[this.activeContacts].
-            messages.
-            push(message);
-            setTimeout(this.autoFunc, 1000);
-            this.newMess="";     
-         }
-    },
-    computed: {
-        //this function will search and show only contacts with letters in common with our digits in search input
-        filteredCustomers:function()
-        {
-            var self=this;
-            return this.contacts.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
-        }
     }            
 })
