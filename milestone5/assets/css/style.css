@@ -61,13 +61,14 @@ header {
     height: 15%;
     background-color: #8EDAFC;
     justify-content: center;
+
 }
 #bell {
     background-color: white;
     border-radius: 100%;
-    font-size: 1.3rem;
-    padding: 10px;
+    font-size: 1.5rem;
     color: #8EDAFC;
+    margin-right: 30px;
 }
 #column_search{  
     height: 10%;
