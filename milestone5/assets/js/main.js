@@ -167,6 +167,9 @@ let app = new Vue ({
              
             },  
         ]          
+    }, 
+    updated() {
+        this.$nextTick(() => this.scrollFunc());
     },
     methods: {
         //this function will show the chat box of contact clicked based on his index
@@ -195,8 +198,15 @@ let app = new Vue ({
             messages.
             push(message);
             setTimeout(this.autoFunc, 1000);
-            this.newMess="";     
+            this.newMess="";  
+         },
+         //  this is the function to automaticcaly scroll down to the last message
+         scrollFunc:function()
+         {
+             var container = this.$el.querySelector("#chat_box");
+             container.scrollTop = container.scrollHeight;    
          }
+       
     },
     computed: {
         //this function will search and show only contacts with letters in common with our digits in search input
@@ -208,5 +218,5 @@ let app = new Vue ({
                 return cont.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;   
             });
         }
-    }            
+    }       
 })

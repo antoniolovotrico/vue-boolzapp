@@ -97,7 +97,7 @@
                     <!-- //Title of selected contact chat box -->
 
                     <!-- Container of box messages-->
-                    <div class="chat_box" v-if="visib">
+                    <div id="chat_box" v-if="visib">
                         <ul v-for="(mes,i) in filteredContacts[activeContacts].messages" :class="mes.status === 'sent'?'chat_bubble_sent d-flex':'chat_bubble_received d-flex'">
                             <li class="bubble d-flex center-align" :class="mes.status === 'sent'?'bubby_sent':'bubby_received'">  
                                 <div> {{mes.text}}<h6 id="mes_date">{{mes.date}}</h6> </div>    

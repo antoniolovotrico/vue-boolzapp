@@ -106,7 +106,7 @@ header {
     padding-right: 20px;
 }
 
-.chat_box {
+#chat_box {
     height: 80%;
     background: url(../img/sfondo_chat.jpg);
     overflow-y: scroll;
