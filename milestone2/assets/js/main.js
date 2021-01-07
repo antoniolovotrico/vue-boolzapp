@@ -37,7 +37,7 @@ let app = new Vue ({
                 messages: [
                     {
                         date: dayjs().format("H:mm"),
-                        text: "How do you feel carring the world on your shoulder?",
+                        text: "How do you feel carrying the world on your shoulders?",
                         status: "sent"
                     },
                     {
@@ -56,7 +56,7 @@ let app = new Vue ({
                 messages: [
                     {
                         date: dayjs().format("H:mm"),
-                        text: "How do you feel carring the world on your shoulder?",
+                        text: "How do you feel carrying the world on your shoulders?",
                         status: "sent"
                     },
                     {
@@ -75,7 +75,7 @@ let app = new Vue ({
                 messages: [
                     {
                         date: dayjs().format("H:mm"),
-                        text: "How do you feel carring the world on your shoulder?",
+                        text: "How do you feel carrying the world on your shoulders?",
                         status: "sent"
                     },
                     {
@@ -94,7 +94,7 @@ let app = new Vue ({
                 messages: [
                     {
                         date: dayjs().format("H:mm"),
-                        text: "How do you feel carring the world on your shoulder?",
+                        text: "How do you feel carrying the world on your shoulders?",
                         status: "sent"
                     },
                     {
@@ -113,7 +113,7 @@ let app = new Vue ({
                 messages: [
                     {
                         date: dayjs().format("H:mm"),
-                        text: "How do you feel carring the world on your shoulder?",
+                        text: "How do you feel carrying the world on your shoulders?",
                         status: "sent"
                     },
                     {
@@ -132,7 +132,7 @@ let app = new Vue ({
                 messages: [
                     {
                         date: dayjs().format("H:mm"),
-                        text: "How do you feel carring the world on your shoulder?",
+                        text: "How do you feel carrying the world on your shoulders?",
                         status: "sent"
                     },
                     {
@@ -151,7 +151,7 @@ let app = new Vue ({
                 messages: [
                     {
                         date: dayjs().format("H:mm"),
-                        text: "How do you feel carring the world on your shoulder?",
+                        text: "How do you feel carrying the world on your shoulders?",
                         status: "sent"
                     },
                     {
