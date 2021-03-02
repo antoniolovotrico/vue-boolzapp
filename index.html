@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="milestone5/assets/css/style.css">
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+        <title>vue-boolzapp</title>
+    </head>
+    <body>
+        <!-- Div container of the entire App including standard sfondo -->
+        <div id="app">
+            <div id="sfondo">
+                <div id="top_green"></div>
+                <div id="background" class="d-flex"></div>
+            </div>
+           
+            <!-- Div container of the vue-boolzapp -->
+            <div id="app_container" class="d-flex">
+                <!-- Div container of the left-column of the app -->
+                <div id="app_container_left" class="d-flex">
+                    
+                    <!-- Personal section -->
+                    <header class="d-flex center-align">
+                    
+                        <div class="title d-flex center-align">
+                            <img v-bind:src="userImg" class="avatar" alt="">
+                            <h3>{{myName}}</h3>
+                        </div>
+                        <div>
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>  
+                        </div>  
+                          
+                    </header>
+
+                    <!-- //Personal section -->
+
+                    <!-- info section -->
+                    <div id="column_info" class="d-flex center-align">
+                        <i id="bell" class="fas fa-bell-slash"></i>
+                        <div class="title_sub">
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            <a href="">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <!-- //info section -->
+
+                    <!-- search section -->
+                    <div id="column_search" class="d-flex center-align">
+                        <input id="input_search"  type="text" placeholder="🔎 Cerca o inizia una nuova chat" v-model="search">
+                    </div>
+                    <!-- //search section -->
+
+                    <!-- contacts section -->
+                    <ul id="column_contact">
+                        <li v-for="(contact,i) in filteredContacts" @click="activeFunc(i)" class="d-flex center-align single_contact">
+                            <div class="title_sub d-flex">
+                                <img class="avatar" v-bind:src="contact.avatar" alt="">
+                                <div>
+                                    <h4>{{contact.name}}</h4>
+                                    <h5 id="mes_contact">{{contact.messages[contact.messages.length - 1].text}}</h5>
+                                </div>    
+                            </div>
+                            <h5>{{contact.messages[contact.messages.length - 1].date}} </h5>
+                        </li>    
+                    </ul>
+                    <!-- //contacts section -->
+
+                </div>
+                <!-- //Div container of the left-column of the app -->
+
+                <!-- Div container of the right-column of the app -->
+                <div id="app_container_right" class="d-flex">
+
+                    <!-- Title of selected contact chat box -->
+                    <div id="chat_title" class="d-flex center-align"> 
+                        <ul id="avatar_name" class="d-flex center-align" v-if="visib">
+                            <li class="d-flex center-align">
+                                <img class="avatar" v-bind:src="filteredContacts[activeContacts].avatar" alt="">
+                                <div class="title_sub">
+                                    <h4>{{filteredContacts[activeContacts].name}}</h4>
+                                    <h5 >Ultimo accesso oggi alle {{filteredContacts[activeContacts].messages[filteredContacts[activeContacts].messages.length -1 ].date}} </h5>
+                                </div>
+                            </li>                     
+                        </ul>
+                        <span v-else></span>
+                        <div id="icon_func">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>        
+                    </div>
+                    <!-- //Title of selected contact chat box -->
+
+                    <!-- Container of box messages-->
+                    <div id="chat_box" v-if="visib">
+                        <ul v-for="(mes,i) in filteredContacts[activeContacts].messages" :class="mes.status === 'sent'?'chat_bubble_sent d-flex':'chat_bubble_received d-flex'">
+                            <li class="bubble d-flex center-align" :class="mes.status === 'sent'?'bubby_sent':'bubby_received'">  
+                                <div> {{mes.text}}<h6 id="mes_date">{{mes.date}}</h6> </div>    
+                            </li> 
+                        </ul>                   
+                    </div>
+                    <!-- //Container of box messages-->
+
+                    <!-- Container of box messages if no contact is selected-->
+                    <div id="nochat_box" v-else></div>
+                    <!-- //Container of box messages if no contact is selected-->
+                    
+                    <!-- Bar of messages to write -->
+                    <div id="message_box" class="d-flex center-align">
+                        <i class="far fa-smile"></i>
+                        <input id="input_message" v-model="newMess" placeholder=" Scrivi un messaggio" @keyup.enter="messFunc" type="text">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <!-- //Bar of messages to write -->
+                </div>
+                <!-- //Div container of the right-column of the app -->
+            </div>
+            <!-- //Div container of the vue-boolzapp -->
+            
+           
+
+        </div>
+        <!-- //Div container of the entire App -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="milestone5/assets/js/main.js"></script> 
+    </body>
+</html>
